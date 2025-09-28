@@ -1,0 +1,6 @@
+add_subdirectory(pceSDL)
+add_subdirectory(pceECS)
+add_subdirectory(pceUtils)
+add_subdirectory(pceComponents)
+add_subdirectory(pceMaths)
+add_subdirectory(pce3dRenderSystems)

@@ -1,0 +1,2 @@
+add_subdirectory(example1_basic_spheres)
+add_subdirectory(example2_more_spheres)
