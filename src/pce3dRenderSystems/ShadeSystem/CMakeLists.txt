@@ -15,11 +15,6 @@ add_library(${PROJ} SHARED
 
 set_target_properties(${PROJ} PROPERTIES PUBLIC_HEADER "${SYS}.hpp")
 
-#TODO: eliminate the need for this
-target_include_directories(${PROJ} PRIVATE
-    /usr/local/include
-)
-
 target_include_directories(${PROJ} PUBLIC
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/src>
     $<INSTALL_INTERFACE:include/${PROJ}>
@@ -33,5 +28,5 @@ install(TARGETS ${PROJ}
 target_link_libraries(${PROJ} PRIVATE
     pceLogger
     pceECS
-    pceUtils
+    pceMaths
 )

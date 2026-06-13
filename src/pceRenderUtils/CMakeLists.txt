@@ -40,4 +40,5 @@ add_subdirectory(test)
 target_link_libraries(${PROJ} PRIVATE
     pceSDL
     pceECS
+    pceMaths
 )

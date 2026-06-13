@@ -54,15 +54,15 @@ bool quatStrToQduat(const std::string& qstr, glm::dquat& qquat)
 
 void printManual()
 {
-    std::cout << "usage: pceMath_example2_vec3_times_quat x1,y1,z1 w,x2,y2,z2\n";
+    std::cout << "usage: pceMath_example3_quat_times_quat w,x1,y1,z1 w,x2,y2,z2\n";
 }
 
 
 int main(int argc, const char* argv[])
 {
     pce::parseLogLevelFromArgs(argc, argv);
-    std::string ln = "pceMaths_ex2";
-    std::cout << "Running: pceMaths example2\n";
+    std::string ln = "pceMaths_ex3";
+    std::cout << "Running: pceMaths example3\n";
     size_t first_arg = 1;
 
     if (argc < 3)

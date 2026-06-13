@@ -20,8 +20,10 @@ class CoreManager {
     framerate_timer framerate_timer_;
 public:
     CoreManager( const char* title = "PineconeEngine"
-               , int screen_x = 1000
-               , int screen_y = 672);
+               //, int screen_x = 1000
+               //, int screen_y = 672);
+               , int screen_x = 1750
+               , int screen_y = 1008);
     ~CoreManager();
 
     void doCorePreUpdate();

@@ -7,15 +7,15 @@ class for initializing SDL and managing the SDL event loop
 -----------------------------------------------------------------*/
 #include <vector>
 #include <SDL2/SDL.h>
-#include <SDL2/SDL_image.h>
+//#include <SDL2/SDL_image.h>
 
 namespace pce {
 
 class Simulation {
 public:
     void init(const char* title
-          , int width=1000
-          , int height=672
+          , int width=1750
+          , int height=1008
           , int xpos=SDL_WINDOWPOS_CENTERED
           , int ypos=SDL_WINDOWPOS_CENTERED
           , bool fullscreen=false);

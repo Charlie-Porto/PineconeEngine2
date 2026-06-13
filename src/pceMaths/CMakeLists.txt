@@ -25,11 +25,6 @@ message (STATUS "${HEADERS}")
 
 set_target_properties(${PROJ} PROPERTIES PUBLIC_HEADER "${HEADERS}")
 
-#TODO: eliminate the need for this
-target_include_directories(${PROJ} PRIVATE
-    /usr/local/include
-)
-
 target_include_directories(${PROJ} PUBLIC
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/src>
     $<INSTALL_INTERFACE:include/${PROJ}>
@@ -37,7 +32,7 @@ target_include_directories(${PROJ} PUBLIC
 
 install(TARGETS ${PROJ}
         LIBRARY DESTINATION lib
-        PUBLIC_HEADER DESTINATION include)
+        PUBLIC_HEADER DESTINATION include/pceMaths)
     #install (DIRECTORY src/
     #     DESTINATION include
     #     FILES_MATCHING PATTERN "*.hpp")

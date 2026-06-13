@@ -1,0 +1,15 @@
+### Examples
+- `pceSDL/examples/example1/pceSDL_example1`
+  - pce::CoreManager basic example; black screen with SDL event loop
+- `pceRenderUtils/examples/example1_render_circle/example1_render_circle`
+  - render tiny white 2D circle
+- `pceMaths/examples/example1/pceMathExample1`
+  - vec * quat hardcoded in source code example
+- `pceMaths/examples/example2/pceMath_example2_vec3_times_quat`
+  - vec * quat  example, pass args via cmd line at runtime
+- `pceMaths/examples/example3/pceMath_example3_quat_times_quat`
+  - quat * quat example, pass args via cmd line at runtime
+- `pceRenderPipeline/examples/example1_basic_spheres/pceRenderPipelineSDL_example1_basic_spheres`
+  - (navigable) render 7 spheres; 6 at vertices of a cube, and 1 at its center
+- `pceRenderPipeline/examples/example2_more_spheres/pceRenderPipelineSDL_example2_more_spheres`
+  - (navigable) render medium sized rainbow cube of spheres

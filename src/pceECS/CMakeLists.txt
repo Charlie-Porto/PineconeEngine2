@@ -22,11 +22,6 @@ add_library(${PROJ} STATIC
 #set_target_properties(${PROJ} PROPERTIES PUBLIC_HEADER "src/${PROJ}.hpp")
 set_target_properties(${PROJ} PROPERTIES PUBLIC_HEADER "${HEADERS}")
 
-#TODO: eliminate the need for this
-target_include_directories(${PROJ} PRIVATE
-    /usr/local/include
-)
-
 target_include_directories(${PROJ} PUBLIC
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/src>
     $<INSTALL_INTERFACE:include/${PROJ}>

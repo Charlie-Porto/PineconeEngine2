@@ -2,8 +2,8 @@
 
 #include "SDL_cartesian_conversion.hpp"
 
-#include <pceMaths/vector_functions.hpp>
 #include <pceMaths/complex_functions.hpp>
+#include <pceMaths/vector_functions.hpp>
 
 #include <cmath>
 

@@ -3,7 +3,6 @@
 
 int main(int argc, const char* argv[])
 {
-    //LOG_LEVEL = pce::LogLevel::Debug;
     pce::parseLogLevelFromArgs(argc, argv);
 
     pce::CoreManager core_manager{};
