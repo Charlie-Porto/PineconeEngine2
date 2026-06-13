@@ -13,9 +13,11 @@
 
 #include <pceLogger/pceLogger.hpp>
 
+
 namespace{
 constexpr const char* log_name = "base_entity_forging";
 }
+
 
 namespace pce {
 namespace forge {
@@ -27,18 +29,18 @@ EntityForgingParams::~EntityForgingParams(){}
 uint32_t forgeEntityBase(ControlPanel& control,
                          const EntityForgingParams& efp)
 {
-    LOG_DEBUG(log_name) << "forging entity base";
+    LOG_DEBUG(log_name) << "Forging entity base";
     const uint32_t e = control.CreateEntity();
 
-    LOG_DEBUG(log_name) << "entity starting position: " << int(e) << ": " << int(efp.com.x) << ", " << int(efp.com.y) << ", " << int(efp.com.z);
+    LOG_DEBUG(log_name) << "Entity " << int(e) << " starting position: " << int(efp.com.x) << ", " << int(efp.com.y) << ", " << int(efp.com.z);
     control.AddComponent(e, Position{.com = efp.com});
     control.AddComponent(e, Radar{});
     control.AddComponent(e, FaceShade{});
     control.AddComponent(e, Render<SDL_Renderer>{.render_fn = efp.render_fn});
     control.AddComponent(e, OrderOfRenderRegistration{});
-    control.AddComponent(e, Surface{
-      .color = efp.color,
-    });
+    control.AddComponent(e,
+        Surface{ .color = efp.color }
+    );
     //control.AddComponent(e, pce::MassDistribution{});
     return e;
 }

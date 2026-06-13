@@ -1,0 +1,1 @@
+- calculate how much memory each entity type takes up

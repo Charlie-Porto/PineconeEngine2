@@ -11,7 +11,7 @@ int main(int argc, const char* argv[])
     pce::ControlPanel control{};
     pce::RenderPipelineSDL render_pipeline{control, core_manager.renderer()};
 
-    //!< Create a balls
+    //!< Create Spheres
     const int axis_location = 40;
     //!< Origin
     pce::forge::SphereForgingParams sfp0;

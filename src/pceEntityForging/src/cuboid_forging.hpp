@@ -1,5 +1,5 @@
-#ifndef rectangular_prism_forging_hpp
-#define rectangular_prism_forging_hpp
+#ifndef cuboid_forging_hpp
+#define cuboid_forging_hpp
 
 /*----------------------------------------------------------------|
 --------------------- Module Description -------------------------|
@@ -53,4 +53,4 @@ void registerRectPrismEntityWithOrderRenderSystem(double size);
 
 
 
-#endif /* rectangular_prism_forging_hpp */
+#endif /* cuboid_forging_hpp */

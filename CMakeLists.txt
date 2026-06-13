@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.21)
 
 #if (NOT DEFINED CMAKE_CXX_STANDARD)
-    set(CMAKE_CXX_STANDARD 17)
+    set(CMAKE_CXX_STANDARD 20)
 #endif()
 
 set (PROJ PineconeEngine2)
@@ -20,10 +20,6 @@ add_definitions(-DDEBUG) # For use with pceLogger
 add_subdirectory(src)
 add_subdirectory(examples)
 
-#target_include_directories(${PROJ} PRIVATE
-#    /usr/local/include
-#)
-#
 #target_link_libraries(${PROJ} PRIVATE
 #    pceLogger
 #)

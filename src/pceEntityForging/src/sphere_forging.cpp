@@ -26,26 +26,25 @@ Entity forgeSphereEntity(ControlPanel& control
                        , const SphereForgingParams& sfp)
 {
     LOG_DEBUG("sphere_forging") << "forging sphere entity";
-  Entity new_entity = forgeEntityBase(control, sfp);
-  control.AddComponent(new_entity, RigidObject{
-    .radius=sfp.radius, 
-    .mass = 4.0 * 3.14 * pow(sfp.radius, 2.0),
-    .is_deadbod = false,
-    .is_restingbod = false,
-    .vertices={std::make_pair(1, sfp.com)},
-    .face_vertex_map = {{1, {1}}},
-    .base_face_id = 1,
-    .face_count = 1,
-    //.index_face_map = {},
-    .face_index_map = {},
-    .entity_face_collision_map = {},
-    .entity_vertex_collision_map = {},
-    .entity_index_collision_map = {},
-    .entity_time_collision_map = {}
-  });
-  auto& render_c = control.GetComponent<Render<SDL_Renderer>>(new_entity);
-  render_c.render_fn = [](SDL_Renderer* renderer, ComponentsRelevantToRender* crtr)
-  {
+    Entity new_entity = forgeEntityBase(control, sfp);
+    control.AddComponent(new_entity,
+            RigidObject{ .radius          = sfp.radius, 
+                         .mass            = 4.0 * 3.14 * pow(sfp.radius, 2.0),
+                         .is_deadbod      = false,
+                         .is_restingbod   = false,
+                         .vertices        = {std::make_pair(1, sfp.com)},
+                         .face_vertex_map = {{1, {1}}},
+                         .base_face_id    = 1,
+                         .face_count      = 1,
+                         .face_index_map  = {},
+                         //.index_face_map = {},
+                         .entity_face_collision_map   = {},
+                         .entity_vertex_collision_map = {},
+                         .entity_index_collision_map  = {},
+                         .entity_time_collision_map   = {} });
+    auto& render_c = control.GetComponent<Render<SDL_Renderer>>(new_entity);
+    render_c.render_fn = [](SDL_Renderer* renderer, ComponentsRelevantToRender* crtr)
+    {
         if (renderer == nullptr || crtr == nullptr)
             return;
         render::renderCircle(renderer,
@@ -54,7 +53,7 @@ Entity forgeSphereEntity(ControlPanel& control
                              crtr->rigid_object.radius * 300 / crtr->rigid_object.vertex_distance_map.at(1),
                              crtr->surface.color,
                              true);
-  };
+    };
 
   //!< TODO: add the below when working on the physics side of things
   //control.AddComponent(new_entity, Force{ .of_gravity = gravitational_force });

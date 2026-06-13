@@ -1,7 +1,4 @@
-#ifndef rectangular_prism_forging_cpp
-#define rectangular_prism_forging_cpp
-
-#include "rectangular_prism_forging.hpp"
+#include "cuboid_forging.hpp"
 
 #include <pceComponents/position_component.hpp>
 #include <pceComponents/face_shade_component.hpp>
@@ -184,10 +181,3 @@ MapIdToIdVect assignVerticestoVertices() {
 
 }
 }
-
-
-
-
-
-
-#endif /* rectangular_prism_forging_cpp */
